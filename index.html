@@ -16,10 +16,9 @@
 
       imgs.forEach(img => {
         img.addEventListener('click', () => {
-    
           img.classList.add('fade-out');
 
-        
+
           setTimeout(() => {
             window.location.href = img.dataset.target;
           }, 500);
