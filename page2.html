@@ -16,10 +16,10 @@
 
       imgs.forEach(img => {
         img.addEventListener('click', () => {
-          // Tambahkan class fade-out
+         
           img.classList.add('fade-out');
 
-          // Tunggu animasi selesai (0.5s), lalu pindah halaman
+          
           setTimeout(() => {
             window.location.href = img.dataset.target;
           }, 500);
