@@ -20,7 +20,7 @@ body {
     z-index: 1;
 }
 
-/* animasi jatuh dari top ke bottom dengan angin */
+
 @keyframes fall {
     0% {
         transform: translateY(0) translateX(0) rotate(0deg);
