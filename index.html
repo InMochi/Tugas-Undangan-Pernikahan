@@ -4,20 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Undangan Pernikahan</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <img src="img/page-1.png" alt="Undangan Pernikahan" class="clickable" data-target="page2.html" />
+      <img
+        src="img/page-1.png"
+        alt="Undangan Pernikahan"
+        class="clickable"
+        data-target="page2.html"
+      />
     </div>
 
     <script>
-      const imgs = document.querySelectorAll('.clickable');
+      const imgs = document.querySelectorAll(".clickable");
 
-      imgs.forEach(img => {
-        img.addEventListener('click', () => {
-          img.classList.add('fade-out');
+      // buat 20 bunga random
+      for (let i = 0; i < 30; i++) {
+        const f = document.createElement("div");
+        f.classList.add("flower");
+        f.style.left = Math.random() * 100 + "vw";
+        f.style.width = 20 + Math.random() * 20 + "px";
+        f.style.height = f.style.width;
+        f.style.animationDuration = 5 + Math.random() * 5 + "s";
+        f.style.animationDelay = Math.random() * 5 + "s";
+        document.body.appendChild(f);
+      }
 
+      imgs.forEach((img) => {
+        img.addEventListener("click", () => {
+          img.classList.add("fade-out");
 
           setTimeout(() => {
             window.location.href = img.dataset.target;
