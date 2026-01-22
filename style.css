@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* slide snap */
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* tiap section snap */
+}
+
+.container img {
+    max-width: 90%;  /* sedikit padding biar rapi */
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 15px; /* opsional, bikin elegan */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3); /* efek mengambang */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* efek zoom in saat hover (opsional) */
+.container img:hover {
+    transform: scale(1.05);
+}
+
+/* Animasi klik gambar */
+.container img.fade-out {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
